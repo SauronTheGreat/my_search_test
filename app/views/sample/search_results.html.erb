@@ -1,0 +1,24 @@
+
+
+
+
+<% @ranks.each_with_index do |rank, index| %>
+    <h2><%= @final_display[rank][0] %></h2><br>
+    <p>
+      <%= @final_display[rank][1] %><br>
+      <%= link_to  @final_display[rank][2] , @final_display[rank][2]%><br>
+      <%= @final_display[rank][3] %><br>
+
+
+    </p>
+    <h3>Score : <%= @final_display[rank][4] %></h3>
+
+
+    -----------------------------------------------
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<% end %>

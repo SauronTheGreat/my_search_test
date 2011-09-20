@@ -1,0 +1,11 @@
+.searchtext { COLOR: #FFFFFF; FONT: 12px arial, verdana, sans-serif; font-weight: normal; }
+.searchsitebox {
+    FONT: 12px arial, verdana, sans-serif;
+    color: #000000;
+    background-color: #FFFFFF;
+
+    WIDTH: 120PX;
+    HEIGHT: 19PX;
+    BORDER: #000000 1px solid;
+    margin-top: 1px;
+}
