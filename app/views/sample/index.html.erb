@@ -1,7 +1,27 @@
+<h3>Bing Search</h3>
+
 <%= form_tag :action => 'search_results' do %>
     <%= text_field_tag :q %>
     <%= submit_tag "Search With Bing !!" %>
 
 <% end %>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h3>Google Search</h3>
+<%= form_tag :action => 'google_search' do %>
+
+    <%= text_field_tag :q %>
+    <%= submit_tag "Search With Google !!" %>
+    <%= hidden_field_tag :page ,0 %>
+
+<% end %>
+
+
 
 

@@ -1,6 +1,7 @@
 QuadnodeTest::Application.routes.draw do
   resources :sample
 match "search"=>'sample#search_results'
+  match "google_search"=>'sample#google_search'
 
   root :to=>'sample#index'
 

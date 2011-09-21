@@ -1,1 +1,21 @@
+<% @doc.elements.each_with_index("hash/responseData/results/result") do |result, index| %>
+
+    <b><%= html_escape(result.get_elements("title")[0].text) %></b>  <br>
+    <%= link_to result.get_elements("url")[0].text, result.get_elements("url")[0].text %><br>
+
+
+    <%= result.get_elements("content")[0].text %>
+    <br>
+    ------------------------------------
+    <br>
+    <br>
+
+<% end %>
+
+
+
+<% @doc.elements.each_with_index("hash/responseData/cursor/pages/page") do |result, index| %>
+    <%= link_to result.get_elements("label")[0].text ,google_search_path(:q=>params[:q],:page=>result.get_elements("label")[0].text)%>
+    <% end %>
+
 <%= debug @res %>
