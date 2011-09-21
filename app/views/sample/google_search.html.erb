@@ -1,16 +1,28 @@
-<% @doc.elements.each_with_index("hash/responseData/results/result") do |result, index| %>
-
-    <b><%= html_escape(result.get_elements("title")[0].text) %></b>  <br>
-    <%= link_to result.get_elements("url")[0].text, result.get_elements("url")[0].text %><br>
 
 
-    <%= result.get_elements("content")[0].text %>
+
+
+<% @ranks.each_with_index do |rank, index| %>
+    <h2><%= @final_display[rank][0] %></h2><br>
+    <p>
+      <%= @final_display[rank][1] %><br>
+      <%= link_to  @final_display[rank][2] , @final_display[rank][2]%><br>
+      <%= @final_display[rank][3] %><br>
+
+
+    </p>
+    <h3>Score : <%= @final_display[rank][4] %></h3>
+
+
+    -----------------------------------------------
     <br>
-    ------------------------------------
     <br>
     <br>
+    <br>
+
 
 <% end %>
+
 
 
 
@@ -18,4 +30,3 @@
     <%= link_to result.get_elements("label")[0].text ,google_search_path(:q=>params[:q],:page=>result.get_elements("label")[0].text)%>
     <% end %>
 
-<%= debug @res %>

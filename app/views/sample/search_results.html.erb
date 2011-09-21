@@ -1,7 +1,3 @@
-
-
-
-
 <% @ranks.each_with_index do |rank, index| %>
     <h2><%= @final_display[rank][0] %></h2><br>
     <p>
@@ -22,3 +18,9 @@
 
 
 <% end %>
+
+<% 5.times do |i| %>
+    <%= link_to "#{i+1}",search_path(:q=>params[:q],:offset=>i*10) %>
+
+<% end %>
+

@@ -3,6 +3,7 @@
 <%= form_tag :action => 'search_results' do %>
     <%= text_field_tag :q %>
     <%= submit_tag "Search With Bing !!" %>
+    <%= hidden_field_tag :offset,0 %>
 
 <% end %>
 
